@@ -1,9 +1,12 @@
 package pbru.mead.aoy.easytraffic;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 
@@ -63,6 +66,17 @@ public class MainActivity extends ActionBarActivity {
 
         Myadater objMyAdater = new Myadater(MainActivity.this, intImage, strTitle);
         trafficListView.setAdapter(objMyAdater);
+
+        //Active onclick on Listview
+        trafficListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                //Intent to detail
+                Intent objIntent = new Intent(MainActivity.this, DetailActivity.class);
+                startActivity(objIntent);
+
+            }
+        });
 
     }
 
