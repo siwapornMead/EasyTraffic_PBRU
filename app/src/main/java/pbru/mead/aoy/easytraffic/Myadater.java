@@ -51,6 +51,8 @@ public class Myadater extends BaseAdapter{
         ImageView iconImageView = (ImageView) view1.findViewById(R.id.imvicon);
         iconImageView.setImageResource(iconInts[i]);
 
+        ///jiuui
+
         // show Text
         TextView titleTextView = (TextView) view1.findViewById(R.id.textView);
         titleTextView.setText(titleStrings[i]);
