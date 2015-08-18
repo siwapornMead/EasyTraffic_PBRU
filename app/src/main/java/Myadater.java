@@ -4,6 +4,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
+import pbru.mead.aoy.easytraffic.R;
+
 /**
  * Created by Lab on 8/18/2015.
  */
@@ -39,8 +41,8 @@ public class Myadater extends BaseAdapter{
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-       // LayoutInflater objLayoutInflater=(L)
-        
+        LayoutInflater objLayoutInflater = (LayoutInflater) objContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View view1 = objLayoutInflater.inflate(R.layout.listview_traffic,viewGroup);
         return null;
     }
 }   // main class
