@@ -22,7 +22,35 @@ public class MainActivity extends ActionBarActivity {
 
         // Initail Widget
         initailwidget();
+
+        // Create ListView
+        createListView();
     }//เมดตอดหลัก
+
+    private void createListView() {
+        String[] strTitle = new String[20];
+        strTitle[0] = "ห้ามเลี้ยวซ้าย";
+        strTitle[1] = "ห้ามเลี้ยวขวา";
+        strTitle[2] = "ตรงไป";
+        strTitle[3] = "เลี้ยวขวา";
+        strTitle[4] = "เลี้ยวซ้าย";
+        strTitle[5] = "ออก";
+        strTitle[6] = "เข้า";
+        strTitle[7] = "ออก";
+        strTitle[8] = "หยุด";
+        strTitle[9] = "จำกัดความสูง";
+        strTitle[10] = "ทางแยก";
+        strTitle[11] = "ห้ามกลับรถ";
+        strTitle[12] = "ห้ามจอด";
+        strTitle[13] = "รถสวน";
+        strTitle[14] = "ห้ามแซง";
+        strTitle[15] = "เข้า";
+        strTitle[16] = "หยุดตรวจ";
+        strTitle[17] = "จำกัดความเร็ว";
+        strTitle[18] = "จำกัดความกว้าง";
+        strTitle[19] = "จำกัดความสูง";
+    }
+
 
     private void initailwidget() {
         trafficListView = (ListView) findViewById(R.id.listView);

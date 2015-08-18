@@ -1,8 +1,12 @@
+package pbru.mead.aoy.easytraffic;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import pbru.mead.aoy.easytraffic.R;
 
@@ -43,6 +47,14 @@ public class Myadater extends BaseAdapter{
 
         LayoutInflater objLayoutInflater = (LayoutInflater) objContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view1 = objLayoutInflater.inflate(R.layout.listview_traffic,viewGroup);
-        return null;
+        // show Image
+        ImageView iconImageView = (ImageView) view1.findViewById(R.id.imvicon);
+        iconImageView.setImageResource(iconInts[i]);
+
+        // show Text
+        TextView titleTextView = (TextView) view1.findViewById(R.id.txtShowTitle);
+        titleTextView.setText(titleStrings[i]);
+
+        return view1;
     }
 }   // main class
